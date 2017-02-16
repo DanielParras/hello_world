@@ -1,0 +1,85 @@
+########################
+Introducción
+########################
+
+Antecedentes
+--------------------------------------------
+Los **adenovirus** son virus desnudos de simetría icosaédrica cuyo genoma es DNA bicatenario. La cápside viral presenta una estructura icosaédrica formada por 252 capsómeros, de los cuales, encontramos 240 hexones y 12 pentones. Los hexones constituyen la proteína mayor del virus, que forman los cimientos fundamentales de la cápside viral; mientras que los pentones forman los vértices de la estructura icosaédrica. 
+
+Todos los adenovirus presentan una organización genómica similar en la que podemos encontrar unos 40 genes que se dividen en genes de transcripción temprana, intermedia y tardía; nombrados como tales debido al ciclo de replicación del virus. Su ciclo de replicación consiste, en primer lugar, en la introducción de su genoma en el núcleo, desde donde se van transcribiendo las proteínas virales de forma ordenada y secuencial: primero se transcriben las proteínas desde E1 hasta E4 siendo estas las proteínas de replicación tempranas, posteriormente, se produce la transcripción de los genes intermedios (IX y IVa2) y, posteriormente, estos intermedios activan a los genes de transcripción tardía (L1 hasta L5). 
+
+Los adenovirus pertenecen al género *Mastadenovirus* y son subclasificados en 7 especies, denominadas con las letras A hasta G, subdividiéndose a su vez en subespecies o serotipos cada una de las mismas. En la siguiente tabla podemos observar el espectro actual de adenovirus humanos. 
+
+	*Tabla 1. Especies y serotipos conocidos actualmente de adenovirus humanos.*
+=====================   =================================
+   Especies                                  Tipos (serotipes/genotipes) 
+=====================   =================================
+A                                               12, 18, 31, 61 
+B                                                3, 7, 11, 14, 16, 21, 34, 35, 50, 55, 66
+C                                                1, 2, 5, 6, 57
+D			     8, 9, 10, 13, 15, 17, 19, 20, 22 to 30, 							     32, 33, 36 to 39, 42 to 49, 51, 53, 54, 
+			     56, 58 to 60, 63 to 67
+E				4
+F				40, 41
+G				52
+
+
+=====================   =================================
+
+ 
+La clasificación taxológica depende de diferentes variables: distancia filogenética (> 5% divergencia basada en una matriz de distancias realizada con las secuencias de la DNA polimerasa), organización genómica, composición G+C%, entre otros factores. Hoy día, la clasificación de los nuevos virus se realiza fundamentalmente con técnicas bioinformáticas realizadas con el genoma completo de los virus. 
+
+
+Nuestro estudio realizado está llevado a cabo con niños que presentan **infección respiratoria aguda** (SARI,  *Severe Acute Respiratory Infection*) enfermedad que incluye síntomas como congestión, tos, fatiga, dolor de cabeza (síntomas inespecíficos) que pueden avanzar hasta dificultad respiratoria, mareos (incluyendo pérdida de consciencia) y disminución de los niveles de oxígeno. Las complicaciones son extremadamente graves: insuficiencia respiratoria, insuficiencia cardíaca congestiva y parada cardiorespiratoria; pudiendo, por tanto, llegar producir la muerte del paciente.
+
+Objetivos
+-------------------------------------
+El estudio ha sido realizado con muestras de  pacientes pediátricos que presentan SARI. Múltiples estudios han relacionado SARI con especies específicas de adenovirus humano (HAdV) así como con nuevas variantes que han surgido por recombinación. En concreto, nuestra investigación se centra en una variante específica de HAdV, que es el serotipo C (HAdV-C) y presenta los siguientes objetivos: 
+
+1. **Identificar los diferentes subtipos de HAdV-C que provocan SARI.** El hecho de que encontremos variantes dentro de un mismo subtipo nos permitirá: 
+	- **Demostrar los eventos de variabilidad genética en un serotipo concreto de HAdv-C** y, en consecuencia, la evidente adaptabilidad que presentan estos tipos de virus para provocar la infección del huésped. 
+
+	- **Establecer la prevalencia de cada serotipo**, identificando, por tanto, qué serotipos son más prevalentes  en la población pediátrica china que presentan SARI durante el tiempo que duró el estudio, desde 2007 hasta 2014.  
+
+
+2. **Detectar posibles nuevos serotipos de HAdV-C que no guarden relación con los anteriormente descritos.** 
+
+3. **Establecer el origen y parentesco filogenético del nuevo serotipo de HAdv-C que se haya podido desarrollar.**
+
+Los adenovirus son genotipados nomalmente por PCR utilizando primers específicos de secuencia. Sin embargo, estas técnicas muchas veces no son lo suficientemente específicas y no permiten establecer la subclasificación mas allá de la misma especie. Puesto que la recombinación es una característica muy ligada a los hAdVs, es frecuente que se creen nuevas cepas a partir de las ya existentes que tengan importancia clínica por su patogenicidad y virulencia. Por tanto, resulta vital identificar de forma rápida y eficiente a estas nuevas cepas con el objetivo de salvaguardar la salud pública a través del control epidemiológico. Para establecer la existencia de nuevos subtipos, resultan de gran interés los análisis filogenéticos, sobretodo aquellos de genomas completos (como será tratado más adelante). 
+
+Asimismo, el análisis filogenético permitirá establecer su relación con otras cepas y nos puede permitir anticiparnos a los posibles mecanismos de virulencia y patogenicidad y, de esta manera, poder garantizar un manejo terapéutico adecuado; siendo, si es necesario, más agresivos en la terapia contra estas nuevas cepas. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

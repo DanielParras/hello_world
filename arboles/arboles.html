@@ -1,0 +1,470 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Construcción y análisis de árboles filogenéticos &mdash; tarea1 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="tarea1 1 documentation" href="../index.html" />
+    <link rel="next" title="Conclusiones" href="../conclusiones/conclusiones.html" />
+    <link rel="prev" title="Alineamiento múltiple y elección del mejor modelo de sustitución." href="../alineamiento/alineamiento.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../conclusiones/conclusiones.html" title="Conclusiones"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../alineamiento/alineamiento.html" title="Alineamiento múltiple y elección del mejor modelo de sustitución."
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">tarea1 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Construcción y análisis de árboles filogenéticos</a><ul>
+<li><a class="reference internal" href="#descripcion-de-los-metodos-de-construccion-de-arboles-filogeneticos-utilizados">Descripción de los métodos de construcción de árboles filogenéticos utilizados</a></li>
+<li><a class="reference internal" href="#analisis-y-descripcion-de-los-diferentes-arboles-filogeneticos-obtenidos">Análisis y descripción de los diferentes árboles filogenéticos obtenidos</a><ul>
+<li><a class="reference internal" href="#metodos-basados-en-distancia">Métodos basados en distancia</a><ul>
+<li><a class="reference internal" href="#metodos-basados-en-distancia-neighbor-joining">Métodos basados en distancia: Neighbor-Joining</a></li>
+<li><a class="reference internal" href="#metodos-basados-en-distancia-upgma">Métodos basados en distancia: UPGMA</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#metodo-basado-en-maxima-parsimonia">Método basado en máxima parsimonia</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../alineamiento/alineamiento.html"
+                        title="previous chapter">Alineamiento múltiple y elección del mejor modelo de sustitución.</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../conclusiones/conclusiones.html"
+                        title="next chapter">Conclusiones</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/arboles/arboles.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="construccion-y-analisis-de-arboles-filogeneticos">
+<h1>Construcción y análisis de árboles filogenéticos<a class="headerlink" href="#construccion-y-analisis-de-arboles-filogeneticos" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="descripcion-de-los-metodos-de-construccion-de-arboles-filogeneticos-utilizados">
+<h2>Descripción de los métodos de construcción de árboles filogenéticos utilizados<a class="headerlink" href="#descripcion-de-los-metodos-de-construccion-de-arboles-filogeneticos-utilizados" title="Permalink to this headline">¶</a></h2>
+<p>Recapitulando, hemos realizado un alineamiento múltiple que hemos analizado extensamente y hemos determinado que las secuencias están muy conservadas entre sí. A continuación, a partir del alineamiento múltiple y utilizando la función <em>Find Best DNA/Protein Model</em> hemos determinado que K2P+G (Gamma=0,27) es el mejor modelo para realizar el árbol filogenético.</p>
+<p>En este apartado, nos vamos a centrar en explotar las diferentes posibilidades de construcción de árboles filogenéticos que tenemos. Bajo mi punto de vista, puesto que K2P+G es el mejor modelo, deberíamos de utilizar para construir nuestro árbol filogenético los métodos basados en distancia y, entre estos, se utilizaría Neighbor-Joining (que además es el utilizado por los autores originales). <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/3447015">Neighbor-Joining</a> ofrece como ventaja frente a UPGMA (<em>Unweighted Pair Group Method with Arithmetic Mean</em>) que no genera un dendrograma y, por tanto, en el árbol generado por Neigbor-Joining, las aristas no tienen por qué tener la misma longitud o distancia genética, reflejando de mejor manera la divergencia evolutiva que UPGMA.</p>
+<p>Posteriormente, analizaremos los árboles obtenidos por ambos métodos de distancias ya que, aunque den árboles que varíen en la longitud de las aristas, debemos obtener árboles cuya organización de las diferentes secuencias sea la misma; y esto nos aporta robustez al estudio.</p>
+<p>Por otra parte, considero de especial interés el realizar un árbol filogenético de acuerdo al método de máxima parsimonia. De esta manera, podremos aprovechar el que las secuencias estén tan conservadas (visto en el apartado anterior) y, así, poder discernir las secuencias ancestrales de los ancestros en común.  Asimismo, de la misma manera que la determinación del árbol filogenético por UPGMA, el realizar el árbol filogenético por máxima parsimonia nos deberá servir para dar robustez al estudio filogenético, puesto que la organización de los clados y las secuencias incluidas en cada uno de ellos debe de mantenerse.</p>
+<p>Finalmente, apuntar que la bondad de los árboles fue determinada a través del método de <em>Bootstrapping</em> realizando en cada uno de ellos 1000 réplicas. En los posteriores árboles filogenéticos presentados, sólamente se representan los valores de Bootstrap que son mayores de 70.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="analisis-y-descripcion-de-los-diferentes-arboles-filogeneticos-obtenidos">
+<h2>Análisis y descripción de los diferentes árboles filogenéticos obtenidos<a class="headerlink" href="#analisis-y-descripcion-de-los-diferentes-arboles-filogeneticos-obtenidos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="metodos-basados-en-distancia">
+<h3>Métodos basados en distancia<a class="headerlink" href="#metodos-basados-en-distancia" title="Permalink to this headline">¶</a></h3>
+<p>Antes de realizar el árbol filogenético, sería interesante realizar la matriz de distancias según el modelo de Kimura-2P + Gamma = 0,27. Esta tabla de distancias se representa de forma parcial en la tabla 4.</p>
+<p><em>El resto de la tabla puede ser descargada en la sección de material suplementario localizada al final de la sección &#8220;Conclusiones&#8221;</em>.</p>
+<p>La tabla 4 representa por parejas la distancia evolutiva entre las diferentes secuencias (algunas seleccionadas) y, lo más interesante es que esta tabla nos confirma con los bajos valores entre los diferentes pares de secuencias; lo que ya habíamos anticipado en el alineamiento múltiple: el alto grado de conservación y, por tanto, la poca divergencia entre los pares de secuencias.</p>
+<p><em>Table 4. Estimación de la divergencia evolutiva según K2P+Gamma</em></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="35%" />
+<col width="30%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Species 1</th>
+<th class="head">Species 2</th>
+<th class="head">Distance</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>KR025776.1|hADVs 2838</td>
+<td>KR025773.1|hAdVs 2802</td>
+<td>0.000</td>
+</tr>
+<tr class="row-odd"><td>KR025776.1|hADVs 2838</td>
+<td>KR025771.1|hAdVs 2797</td>
+<td>0.000</td>
+</tr>
+<tr class="row-even"><td>KR025773.1|hAdVs 2802</td>
+<td>KR025771.1|hAdVs 2797</td>
+<td>0.000</td>
+</tr>
+<tr class="row-odd"><td>KR025776.1|hADVs 2838</td>
+<td>KR025755.1|hAdVs 2639</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>KR025773.1|hAdVs 2802</td>
+<td>KR025755.1|hAdVs 2639</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KR025771.1|hAdVs 2797</td>
+<td>KR025755.1|hAdVs 2639</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>KR025776.1|hADVs 2838</td>
+<td>KM378036.1|hADVs CBJ353</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KR025773.1|hAdVs 2802</td>
+<td>KM378036.1|hADVs CBJ353</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>KR025771.1|hAdVs 2797</td>
+<td>KM378036.1|hADVs CBJ353</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KR025755.1|hAdVs 2639</td>
+<td>KM378036.1|hADVs CBJ353</td>
+<td>0.000</td>
+</tr>
+<tr class="row-even"><td>KR025776.1|hADVs 2838</td>
+<td>KM378035.1|hAdVs CBJ350</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KR025773.1|hAdVs 2802</td>
+<td>KM378035.1|hAdVs CBJ350</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>KR025771.1|hAdVs 2797</td>
+<td>KM378035.1|hAdVs CBJ350</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KR025755.1|hAdVs 2639</td>
+<td>KM378035.1|hAdVs CBJ350</td>
+<td>0.000</td>
+</tr>
+<tr class="row-even"><td>KM378036.1|hADVs CBJ353</td>
+<td>KM378035.1|hAdVs CBJ350</td>
+<td>0.000</td>
+</tr>
+<tr class="row-odd"><td>KR025776.1|hADVs 2838</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.032</td>
+</tr>
+<tr class="row-even"><td>KR025773.1|hAdVs 2802</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.032</td>
+</tr>
+<tr class="row-odd"><td>KR025771.1|hAdVs 2797</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.032</td>
+</tr>
+<tr class="row-even"><td>KR025755.1|hAdVs 2639</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.166</td>
+</tr>
+<tr class="row-odd"><td>KM378036.1|hADVs CBJ353</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.166</td>
+</tr>
+<tr class="row-even"><td>KM378035.1|hAdVs CBJ350</td>
+<td>HAdV-C6|Partial genome</td>
+<td>0.166</td>
+</tr>
+<tr class="row-odd"><td>KR025776.1|hADVs 2838</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.125</td>
+</tr>
+<tr class="row-even"><td>KR025773.1|hAdVs 2802</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.125</td>
+</tr>
+<tr class="row-odd"><td>KR025771.1|hAdVs 2797</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.125</td>
+</tr>
+<tr class="row-even"><td>KR025755.1|hAdVs 2639</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.017</td>
+</tr>
+<tr class="row-odd"><td>KM378036.1|hADVs CBJ353</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.017</td>
+</tr>
+<tr class="row-even"><td>KM378035.1|hAdVs CBJ350</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.017</td>
+</tr>
+<tr class="row-odd"><td>HAdV-C6|Partial genome</td>
+<td>HadV-C57|Partial genome</td>
+<td>0.161</td>
+</tr>
+<tr class="row-even"><td>KR025776.1|hADVs 2838</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.144</td>
+</tr>
+<tr class="row-odd"><td>KR025773.1|hAdVs 2802</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.144</td>
+</tr>
+<tr class="row-even"><td>KR025771.1|hAdVs 2797</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.144</td>
+</tr>
+<tr class="row-odd"><td>KR025755.1|hAdVs 2639</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.096</td>
+</tr>
+<tr class="row-even"><td>KM378036.1|hADVs CBJ353</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.096</td>
+</tr>
+<tr class="row-odd"><td>KM378035.1|hAdVs CBJ350</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.096</td>
+</tr>
+<tr class="row-even"><td>HAdV-C6|Partial genome</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.190</td>
+</tr>
+<tr class="row-odd"><td>HadV-C57|Partial genome</td>
+<td>HAdV-C5|Partial genome</td>
+<td>0.097</td>
+</tr>
+<tr class="row-even"><td>KR025776.1|hADVs 2838</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.000</td>
+</tr>
+<tr class="row-odd"><td>KR025773.1|hAdVs 2802</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.000</td>
+</tr>
+<tr class="row-even"><td>KR025771.1|hAdVs 2797</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.000</td>
+</tr>
+<tr class="row-odd"><td>KR025755.1|hAdVs 2639</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>KM378036.1|hADVs CBJ353</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.140</td>
+</tr>
+<tr class="row-odd"><td>KM378035.1|hAdVs CBJ350</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.140</td>
+</tr>
+<tr class="row-even"><td>HAdV-C6|Partial genome</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.032</td>
+</tr>
+<tr class="row-odd"><td>HadV-C57|Partial genome</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.125</td>
+</tr>
+<tr class="row-even"><td>HAdV-C5|Partial genome</td>
+<td>HAdV-C2|Partial genome</td>
+<td>0.144</td>
+</tr>
+<tr class="row-odd"><td>KR025776.1|hADVs 2838</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.143</td>
+</tr>
+<tr class="row-even"><td>KR025773.1|hAdVs 2802</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.143</td>
+</tr>
+<tr class="row-odd"><td>KR025771.1|hAdVs 2797</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.143</td>
+</tr>
+<tr class="row-even"><td>KR025755.1|hAdVs 2639</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.001</td>
+</tr>
+<tr class="row-odd"><td>KM378036.1|hADVs CBJ353</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.001</td>
+</tr>
+<tr class="row-even"><td>KM378035.1|hAdVs CBJ350</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.001</td>
+</tr>
+<tr class="row-odd"><td>HAdV-C6|Partial genome</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.169</td>
+</tr>
+<tr class="row-even"><td>HadV-C57|Partial genome</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.019</td>
+</tr>
+<tr class="row-odd"><td>HAdV-C5|Partial genome</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.098</td>
+</tr>
+<tr class="row-even"><td>HAdV-C2|Partial genome</td>
+<td>HAdV-C1| Partial genome</td>
+<td>0.143</td>
+</tr>
+</tbody>
+</table>
+<p>Procedemos a continuación a realizar los árboles filogenéticos correspondientes.</p>
+<a class="reference internal image-reference" href="../_images/K2P_NJ_tree.png"><img alt="alternate text" class="align-right" src="../_images/K2P_NJ_tree.png" style="width: 400px; height: 400px;" /></a>
+<a class="reference internal image-reference" href="../_images/K2P_NJ_tree_coment.png"><img alt="alternate text" class="align-right" src="../_images/K2P_NJ_tree_coment.png" style="width: 400px; height: 200px;" /></a>
+<div class="section" id="metodos-basados-en-distancia-neighbor-joining">
+<h4>Métodos basados en distancia: Neighbor-Joining<a class="headerlink" href="#metodos-basados-en-distancia-neighbor-joining" title="Permalink to this headline">¶</a></h4>
+<p>Realizamos en primer lugar el árbol filogenético basado en distancias según Neighbor-Joining, puesto que, además de por las razones aportadas al inicio del apartado, es el método que realizan los autores del artículo en cuestión.</p>
+<p>Los genomas de referencia de cada uno de los subtipos de HAdV-C, a los que se les ha extraído por alineamiento múltiple y de forma individual las secuencias C-terminal del hexón para construir el árbol filogenético, están marcadas con un círculo relleno color negro. El rombo relleno de color granate está marcando unas secuencias determinadas que corresponden a un mismo clado que identifica a un nuevo serotipo de HAdV-C, como será descrito posteriormente en el análisis pormenorizado de cada clado.</p>
+<p>Observamos como las diferentes muestras extraídas de los pacientes se identifican respectivamente con un clado determinado en el que se puede identificar, en cada uno de ellos, el serotipo de referencia.</p>
+<dl class="docutils">
+<dt>Es plausible, por tanto, formular la hipótesis que aquellos clados que presentan mayor número de muestras que el resto corresponden a serotipos que tienen mayor tendencia que los otros serotipos de HAdV-C a infectar niños y a provocar la enfermedad respiratoria aguda. En concreto, nos referimos a los siguientes serotipos:</dt>
+<dd><ul class="first last simple">
+<li>HAdV-C2</li>
+<li>HAdV-C5</li>
+<li>HAdV-C1</li>
+</ul>
+</dd>
+</dl>
+<a class="reference internal image-reference" href="../_images/S1_TN93_Tree.png"><img alt="alternate text" class="align-right" src="../_images/S1_TN93_Tree.png" style="width: 400px; height: 400px;" /></a>
+<p>Una de las razones posibles por las que ciertos serotipos son encontrados en niños con SARI en mayor proporción que otros es que estos serotipos tienen mayor tendencia a mutar que el resto de serotipos, lo cual le proporcionaría una ventaja evolutiva frente a los anteriores, ya que podrían evadir el sistema inmunitario del huésped con mayor facilidad y, de la misma manera, aumentar las posibilidades de infección porque el tropismo que presentan podría ser más amplio (al tener mayor capacidad mutagénica, pueden experimentar mutaciones de superficie que reconozcan una mayor variedad de receptores).</p>
+<p>Finalmente, me gustaría resaltar la necesidad de contrastar el árbol filogenético obtenido por Neighbor-Joining a través de Kimura 2-parámetros como modelo de sustitución con otro árbol filogenético realizado a través de Neighbor-Joining utilizando el modelo de TN93+G (G=0,29), que corresponde al tercer mejor modelo de sustitución obtenido según la función <em>Find Best DNA Model de Mega 7</em>. Con esto conseguiremos demostrar que la agrupación de las secuencias en los distintos clados es independiente del modelo de sustitución empleado.</p>
+<p>Este árbol puede ser descargado como material suplementario a través de un enlace que será incluido en la sección correspondiente encontrada al final del apartado <em>Conclusiones</em>.</p>
+<p>Como podemos observar en la imagen de la derecha donde se ve el árbol descrito, se confirma que, efectivamente, obtenemos el mismo tipo de árbol filogenético utilizando Neighbor-Joining y TN93+G que utilizando Neighbor-Joining y Kimura-2P.</p>
+<hr class="docutils" />
+<p>A continuación, pasamos a analizar los diferentes clados:</p>
+<p><em>Serotipo HAdV-C1</em></p>
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdvC1.png"><img alt="alternate text" class="align-right" src="../_images/NJ_tree_HAdvC1.png" style="width: 300px; height: 200px;" /></a>
+<p>Este serotipo es uno de los principales que podemos encontrar en los pacientes pediátricos pediátricos con SARI. En este estudio, se han recogido doce secuencias variantes del hexón que se considera del serotipo HAdV-C1. Es decir, las proporción de variantes de HAdV-C1 que causan SARI en pacientes pediátricos corresponde a 27,9 % (12 de las 43 muestras recogidas).</p>
+<p>En cuanto al árbol extraído y que corresponde únicamente al serotipo HAdV-C1, es reseñable afirmar que la evolución que ha experimentado cada una de las diferentes cepas de HAdV-C1 es similar entre ellas. Sin embargo, lo que resulta más interesante es que podamos distinguir dos clados que se han originado a partir de un ancestro común: el clado de HAdV-C1 y otro clado de características muy similares a HAdV-C1 y que no presenta la secuencia del serotipo de referencia.</p>
+<hr class="docutils" />
+<p><em>Serotipo HAdV-C2</em></p>
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdvC2.png"><img alt="alternate text" class="align-right" src="../_images/NJ_tree_HAdvC2.png" style="width: 400px; height: 200px;" /></a>
+<p>El clado del serotipo HAdV-C2 engloba un gran conjunto de secuencias, lo cual nos indica que es el serotipo que más probablemente encontraremos en un individuo pediátrico con SARI infectado por HAdV-C, junto con el serotipo HAdV-C1. Las variantes del serotipo HAdV-C2 se encuentran en 13 muestras de las 49 recogidas, lo que hacen un porcentaje de 30,23% de pacientes con SARI infectados por este serotipo.</p>
+<p>Si analizamos el clado por separado extraído del árbol filogenético, lo que más rápidamente podremos observar es que una de las secuencias (KM877533) ha experimentado una gran divergencia respecto al resto de secuencias de HAdV-C2 puesto que la distancia hacia el clado del ancestro en común es muy superior al resto de secuencias.
+En cuanto al resto de secuencias, es reseñable afirmar que presentan un grado de divergencia similar.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdvC5.png"><img alt="alternate text" class="align-right" src="../_images/NJ_tree_HAdvC5.png" style="width: 400px; height: 200px;" /></a>
+<p><em>Serotipo HAdV-C5</em></p>
+<p>El serotipo HAdV-C5 es el tercer serotipo más prevalente en pacientes pediátricos con SARI con una prevalencia de un 23,25%. Como vemos, los serotipos C1, C2 y C5 son los principales causantes de SARI en pacientes pediátricos en esta población, siendo encontrados los mismos en 35 de 45 muestras recogidas, lo que supone un 77,78%.</p>
+<p>Observando más en detalle el clado del serotipo HAdV-C5, podemos observar como todas las cepas encontradas en los pacientes pediátricos se han desarrollado directamente por divergencia con el serotipo principal (<strong>HAdV-C5</strong>) puesto que desde HAdV-C5 parte una arista que da lugar a un nodo, un ancestro en común, a partir del cual se han desarollado y se han originado el resto de cepas.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdvC57.png"><img alt="alternate text" class="align-right" src="../_images/NJ_tree_HAdvC57.png" style="width: 400px; height: 100px;" /></a>
+<p><em>Serotipo HAdV-C57</em></p>
+<p>Únicamente encontramos una muestra positiva para presencia de HAdV-C57 en pacientes pediátricos con SARI. La prevalencia de este serotipo es realmente poco frecuente en las muestras recogidas, con un 2.33% o, lo que es lo mismo, una proporción de 1 afectado por HAdV-C57 de 43 muestras recogidas.</p>
+<p>Existen tres razones posibles principalmente que explicarían la baja proporción. Por una parte, este hecho podría deberse a que el serotipo C57 no estaría adaptado en absoluto a humanos y, por esta causa, no podría provocar infección. Por otra parte, la baja prevalencia del serotipo C57 podría deberse a que, sencillamente, la infección de C57 en humanos no afecta a niños o bien no produce SARI, generalmente; de manera que, en cualquiera de estos supuestos, no podría detectarse puesto que las muestras han sido obtenidas de pacientes pediátricos con SARI. Finalmente, otra de las causas podría ser el hecho de que el serotipo HAdV-C57 no fuera bien caracterizado, es decir, no sería detectado por limitaciones técnicas y analíticas.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdvC6.png"><img alt="alternate text" class="align-right" src="../_images/NJ_tree_HAdvC6.png" style="width: 420px; height: 150px;" /></a>
+<p><em>Serotipo HAdV-C6</em></p>
+<p>El serotipo HAdV-C6 no es muy prevalente en las muestras aquí recogidas, siendo encontrado encontrado en 4 de 43 muestras; lo cual significaría una prevalencia de 9,3%.</p>
+<p>Si observamos en detalle el clado del serotipo C6, podremos apreciar cómo el clado está dividido en dos grupos bien diferenciados, un clado (el formado por KM877540 y KR025768) comparte un ancestro en común que es diferente al clado donde se encuentra C6. A su vez, el clado donde se encuentra HAdV-C6 presenta un ancestro en común del cual surgió la arista de KM377998 y un ancestro en común del que, ahora sí, surgió por evolución HAdV-C6.</p>
+<p>Es decir, este clado es muy interesante, porque el que consideramos como el genoma de referencia para el serotipo, está localizado en otro clado separado y, como apreciamos en el árbol, a partir del mismo no se han originado todos los HAdV considerados en este grupo.</p>
+<hr class="docutils" />
+<p><em>Serotipo HAdV-Cnew(nuevo serotipo)</em></p>
+<a class="reference internal image-reference" href="../_images/NJ_tree_HAdv_new.png"><img alt="alternate text" class="align-left" src="../_images/NJ_tree_HAdv_new.png" style="width: 400px; height: 200px;" /></a>
+<p>Este clado resulta de gran interés y se encuentra en 6 de 43 muestras teniendo, por tanto, una prevalencia de 13,95% en pacientes pediátricos con SARI. Pese a no ser una prevalencia demiasiado elevada, hay que tener en cuenta que <strong>no encontramos en el clado ninguna secuencia que pertenezca a un serotipo concreto de HAdV-C, que son las que hemos introducido.</strong></p>
+<p>El árbol filogenético presentado a la izquierda recoge también al serotipo C6 con el objetivo de poner de manifiesto que, realmente, este nuevo serotipo se localiza en un clado totalmente diferente, cuyo ancestro en común (en la proteína del hexón) fue compartido con el serotipo C6.</p>
+<p>Como consecuencia, podemos definir la existencia de un nuevo serotipo de HAdV-C capaz de infectar a individuos pediátricos y producir SARI en China.</p>
+<p>La identificación de un nuevo serotipo con el análisis filogenético realizado con la proteína del hexon del virus es poco consistente, puesto que es posible que estas cepas se hayan originado a partir de un ancestro en común cuya proteína del hexón proceda de otra subespecie de adenovirus y, como consecuencia, den lugar a un clado aislado no relacionado con ningún serotipo de HAdV-C. Es por ello que, con el mero objetivo de confirmar la existencia del nuevo serotipo de HAdV-C y establecer la relación filogenética del mismo con el resto de especies y subespecies de <em>Mastadenovirus</em>, se ha realizado un árbol filogenético con los genomas completos de 12 HAdV, incluyendo todos los serotipos de la subespecie HAdV-C y otras subespecies.</p>
+<a class="reference internal image-reference" href="../_images/New_strain_tree.PNG"><img alt="alternate text" class="align-left" src="../_images/New_strain_tree.PNG" /></a>
+<p>El árbol en cuestión es el presentado a la izquierda. Ha sido realizado con el modelo de sustitución Tajima-Nei (que es el modelo de sustitución determinado como el mejor a través de la función <em>Find Best DNA Model</em> de Mega 7) a través del método de Neighbor-Joining y se ha determinado la bondad del árbol con un Bootstrap de 1000.</p>
+<p>El análisis filogenético de las secuencias completas demuestra que, realmente, se ha identificado una nueva cepa de HAdV-C, formando un nuevo subclado dentro del clado constituido por HADV-C y el serotipo C2.</p>
+<img alt="alternate text" src="../_images/TN_NJ_tree_new_coment.png" />
+<p><em>El material utilizado para la determinación del árbol filogenético con las secuencias completas está incluido en los archivos de material suplementario que podemos encontrar al final del apartado &#8220;Conclusiones&#8221;.</em></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="metodos-basados-en-distancia-upgma">
+<h4>Métodos basados en distancia: UPGMA<a class="headerlink" href="#metodos-basados-en-distancia-upgma" title="Permalink to this headline">¶</a></h4>
+<p>El propósito de este apartado consiste en realizar el árbol filogenético con este otro método basado en distancia, UPGMA, utilizando también como modelo de sustitución Kimura 2-parámetros, para así aportar robustez al árbol filogenético obtenido de acuerdo a Neighbor Joining.</p>
+<p>Puesto que los distintos clados ya han sido discutidos ampliamente en el apartado anterior con el árbol de referencia utilizado en el artículo original, en este apartado vamos a obviar esta parte y nos centraremos en presentar el árbol filogenético según UPGMA y compararlo con el obtenido según Neighbor Joining en vistas de comprobar si presenta unos clados lo más similares posibles, lo que significará que el árbol filogenético será lo suficientemente robusto como para extraer las conclusiones.</p>
+<a class="reference internal image-reference" href="../_images/K2P_NJ_tree.png"><img alt="alternate text" class="align-left" src="../_images/K2P_NJ_tree.png" style="width: 475px; height: 475px;" /></a>
+<a class="reference internal image-reference" href="../_images/K2P_UPGMA_tree.png"><img alt="alternate text" class="align-right" src="../_images/K2P_UPGMA_tree.png" style="width: 475px; height: 475px;" /></a>
+<p>El árbol realizado acorde UPGMA se ha realizado con los parámetros por defecto, utilizando K2P+G como modelo de sustitución y con un bootstrap de 1000, al igual que el árbol realizado con Neighbor Joining. Como podemos observar si comparamos ambos árboles, pese a que en el obtenido con UPGMA presenta unas aristas que no reflejan la distancia genética real, debido a la propia naturaleza del método; <strong>las secuencias que podemos encontrar en cada uno de los diferentes clados son las mismas</strong> e, incluso, en muchos clados se conserva el orden de aparición que encontramos en UPGMA.</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="metodo-basado-en-maxima-parsimonia">
+<h3>Método basado en máxima parsimonia<a class="headerlink" href="#metodo-basado-en-maxima-parsimonia" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/MaxPars_tree.png"><img alt="alternate text" class="align-right" src="../_images/MaxPars_tree.png" style="width: 412.0px; height: 412.0px;" /></a>
+<p>Debido al gran grado de conservación que se encuentra entre las diferentes secuencias del hexon de HAdV-C obtenidas, es plausible pensar en utilizar como método basado en máxima parsimonia para la construcción de árbol filogenético del árbol filogenético.</p>
+<p>En el artículo original, ni siquiera se plantea la utilización de este método, probablemente porque determinar la secuencia original no es un objetivo prioritario. Sin embargo, bajo mi punto de vista, resultaría interesante aprovechar la conservación y poder inferir con un alto grado de certeza una relación filogenética clara en el que se puedan ver parte de los cambios que han experimentado las secuencias en su evolución.</p>
+<p>El árbol generado a través del método de máxima parsimonia se puede observar a la derecha de esta subsección y ha sido realizado utilizando un bootstrap de 1000 réplicas. De la misma manera que en el árbol anterior, hemos señalado las secuencias de referencia con un círculo relleno de color negro, mientras que las secuencias que corresponden al nuevo serotipo identificado está marcado con un rombo relleno de color granate.</p>
+<p>Como podemos observar, realizando el análisis filogenético a través del método de máxima parsimonia, un modelo independiente de las distancias y que trata de inferir las diferentes secuencias ancestrales para determinar los diferentes clados  y el orden evolutivo, obtenemos el mismo tipo de árbol en el que se mantienen constantes los diferentes clados, pudiendo encontrar en el interior de cada uno de ellos las mismas secuencias que habíamos obtenido por el método de construcción de árboles de Neighbor-Joining y aportando aún mayor robustez al árbol filogenético obtenido.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../conclusiones/conclusiones.html" title="Conclusiones"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../alineamiento/alineamiento.html" title="Alineamiento múltiple y elección del mejor modelo de sustitución."
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">tarea1 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Daniel Parras Molina.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

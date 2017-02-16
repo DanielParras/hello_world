@@ -1,0 +1,188 @@
+
+
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Alineamiento múltiple y elección del mejor modelo de sustitución. &mdash; tarea1 1 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/bizstyle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/bizstyle.js"></script>
+    <link rel="top" title="tarea1 1 documentation" href="../index.html" />
+    <link rel="next" title="Construcción y análisis de árboles filogenéticos" href="../arboles/arboles.html" />
+    <link rel="prev" title="Secuencias biológicas" href="../secuencias/secuencias.html" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="_static/css3-mediaqueries.js"></script>
+    <![endif]-->
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../arboles/arboles.html" title="Construcción y análisis de árboles filogenéticos"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../secuencias/secuencias.html" title="Secuencias biológicas"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">tarea1 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Alineamiento múltiple y elección del mejor modelo de sustitución.</a><ul>
+<li><a class="reference internal" href="#algoritmo-de-alineamiento-multiple-seleccionado">Algoritmo de alineamiento múltiple seleccionado</a></li>
+<li><a class="reference internal" href="#analisis-del-alineamiento-multiple">Análisis del alineamiento múltiple</a></li>
+<li><a class="reference internal" href="#clasificacion-de-los-mejores-modelos-de-sustitucion">Clasificación de los mejores modelos de sustitución.</a><ul>
+<li><a class="reference internal" href="#descripcion-y-comentario-del-modelo-de-sustitucion-seleccionado">Descripción y comentario del modelo de sustitución seleccionado</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../secuencias/secuencias.html"
+                        title="previous chapter">Secuencias biológicas</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../arboles/arboles.html"
+                        title="next chapter">Construcción y análisis de árboles filogenéticos</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../_sources/alineamiento/alineamiento.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="alineamiento-multiple-y-eleccion-del-mejor-modelo-de-sustitucion">
+<h1>Alineamiento múltiple y elección del mejor modelo de sustitución.<a class="headerlink" href="#alineamiento-multiple-y-eleccion-del-mejor-modelo-de-sustitucion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="algoritmo-de-alineamiento-multiple-seleccionado">
+<h2>Algoritmo de alineamiento múltiple seleccionado<a class="headerlink" href="#algoritmo-de-alineamiento-multiple-seleccionado" title="Permalink to this headline">¶</a></h2>
+<p>Una vez hemos aislado las secuencias de la región C-terminal del hexón del genoma completo de cada uno de los serotipos diferentes de HAdV-C, procedemos a realizar el alineamiento múltiple de dichas regiones con las secuencias obtenidas de los pacientes pediátricos con SARI.</p>
+<p>El algoritmo de alineamiento múltiple seleccionado ha sido Clustal, puesto que este es el que se recomienda utilizar cuando se realiza un alineamiento múltiple de secuencias nucleotídicas. Los parámetros utilizados son los incluidos por defecto en el software Mega7 y los resultados los podemos descargar en formato .fasta y .mas (Mega) en los siguientes enlaces:</p>
+<p><a class="reference download internal" href="../_downloads/Clustal_Multiple_alignment_hexon.fasta" download=""><code class="xref download docutils literal"><span class="pre">Alineamiento</span> <span class="pre">múltiple</span> <span class="pre">hexones</span> <span class="pre">según</span> <span class="pre">Clustal</span></code></a></p>
+<p><a class="reference download internal" href="../_downloads/Clustal_Multiple_alignment_hAdVs&partialgenome.mas" download=""><code class="xref download docutils literal"><span class="pre">Alineamiento</span> <span class="pre">múltiple</span> <span class="pre">hexones</span> <span class="pre">según</span> <span class="pre">Clustal</span> <span class="pre">(Formato</span> <span class="pre">Mega)</span></code></a></p>
+<p>Se recomienda que para el alineamiento múltiple de nucleótidos se utilice Clustal. Es por esta razón por la que hemos elegido utilizar este algoritmo para el alineamiento múltiple. Sin embargo, para dar robustez a las conclusiones extraídas a partir del alineamiento múltiple con Clustal y demostrar que el alineamiento múltiple no depende del método utilizado, hemos utilizado también Muscle (datos no mostrados). Los resultados han sido prácticamente los mismos que los obtenidos utilizando Clustal, como cabría esperar porque, por otra parte, no hay razón para que ocurriera lo contrario dado también el gran grado de conservación entre las secuencias.</p>
+<p>Podemos encontrar el archivo del alineamiento múltiple según Muscle en formato .fasta en el siguiente enlace:</p>
+<p><a class="reference download internal" href="../_downloads/Muscle_Multiple_alignment_hexon.fasta" download=""><code class="xref download docutils literal"><span class="pre">Alineamiento</span> <span class="pre">múltiple</span> <span class="pre">hexones</span> <span class="pre">según</span> <span class="pre">muscle</span></code></a></p>
+</div>
+<div class="section" id="analisis-del-alineamiento-multiple">
+<h2>Análisis del alineamiento múltiple<a class="headerlink" href="#analisis-del-alineamiento-multiple" title="Permalink to this headline">¶</a></h2>
+<p>El alineamiento múltiple obtenido con Clustal en Mega7 es presentado parcialmente por las siguientes imágenes, que se han elegido como representativas de lo que encontramos a lo largo de todo el alineamiento múltiple de nucleótidos. El alineamiento múltiple de todas las secuencias puede ser descargado en formato de mega (.mas) en la subsección <em>Material Suplementario</em> de la sección de <em>Conclusiones</em>.</p>
+<p>Las mutaciones encontradas, tanto <a class="reference external" href="https://en.wikipedia.org/wiki/Missense_mutation">mutaciones missense</a>
+como <a class="reference external" href="https://en.wikipedia.org/wiki/Synonymous_substitution">mutaciones silenciosas o sinónimas</a> están resaltadas sobre el fondo blanco (salvaguardando el extremo 5&#8217; de algunas secuencias cuya longitud es menor).</p>
+<a class="reference internal image-reference" href="../_images/Nucleotide_5_Hexon_cterminal_total_alignment.png"><img alt="alternate text" src="../_images/Nucleotide_5_Hexon_cterminal_total_alignment.png" /></a>
+<a class="reference internal image-reference" href="../_images/Protein_5_Hexon_cterminal_total_alignment.png"><img alt="alternate text" src="../_images/Protein_5_Hexon_cterminal_total_alignment.png" /></a>
+<p>Como podemos apreciar, las secuencias presentan un alto grado de conservación. En el alineamiento múltiple de nucleótidos, observamos que lo único que existen son ciertas sustituciones puntuales y, en ningún caso, podemos encontrar inserciones o deleciones que nos den lugar a la aparición de <em>gaps</em> (&#8211;). Sin embargo, sí que es verdad que ciertas secuencias presentan una zona 5&#8217; con menor número de nucleótidos, aunque posteriormente, desde el inicio de estas secuencias, se observa su alto grado de conservación que se mantiene a lo largo de todas las secuencias de los hexones.</p>
+<p>Analizando en detalle el alineamiento múltiple de nucleótidos, podemos corroborar que las transiciones y transversiones que encontramos resaltadas son mayormente mutaciones de tipo sinónimas, que consisten en una mutación que se producen habitualmente en el tercer nucleótido del codón resultando en que no se produce un cambio de aminoácido en la secuencia proteica. El que no se produzca un cambio de aminoácido es debido al balanceo codón-anticodón que da origen a la hipótesis del tambaleo (que explica en parte la redundancia del código genético). En la imagen inferior podemos observar una mutación sinónima resaltada en rojo, observando cómo la transición T-C no provoca un cambio en el aminoácido, que sigue siendo asparragina.</p>
+<a class="reference internal image-reference" href="../_images/Ex_mut_sin.png"><img alt="alternate text" src="../_images/Ex_mut_sin.png" /></a>
+<a class="reference internal image-reference" href="../_images/Ex_mut_sin_prot.png"><img alt="alternate text" src="../_images/Ex_mut_sin_prot.png" /></a>
+<p>Minoritariamente, en el alineamiento múltiple encontramos mutaciones como la señalada en color negro en las imágenes inferiores. Estas mutaciones son mutaciones de tipo missense en las que el cambio del nucleótido del codón provoca un cambio en la secuencia aminoacídica. Normalmente, encontramos que la mutación se produce en el primer o segundo  nucleótido del codón, ya que es más difícil que se produzca un mantenimiento del código genético, aunque no es imposible por la redundancia del código genético (algunos aminoácidos son codificiados hasta por seis codones).</p>
+<a class="reference internal image-reference" href="../_images/Ex_mut_mis.png"><img alt="alternate text" src="../_images/Ex_mut_mis.png" /></a>
+<a class="reference internal image-reference" href="../_images/Ex_mut_mis_prot.png"><img alt="alternate text" src="../_images/Ex_mut_mis_prot.png" /></a>
+<p>Como conclusión, en el alineamiento múltiple observamos que existe un alto grado de conservación en el que son frecuentes las <strong>mutaciones sinónimas</strong>, como podemos observar en la comparación de estas dos imágenes extraídas del alineamiento múltiple:</p>
+<a class="reference internal image-reference" href="../_images/Many_sin_mut_.png"><img alt="../_images/Many_sin_mut_.png" src="../_images/Many_sin_mut_.png" /></a>
+<a class="reference internal image-reference" href="../_images/Many_sin_mut_prot.png"><img alt="../_images/Many_sin_mut_prot.png" src="../_images/Many_sin_mut_prot.png" /></a>
+<p>Finalmente, es importante destacar que la proporción de <strong>mutaciones missense</strong>, es superior a medida que nos vamos acercando al final del alineamiento múltiple; aunque, insistimos, el grado de conservación es muy elevado entre las secuencias. Podemos observar los cambios de aminoácidos causados por mutaciones missense en el alineamiento múltiple de las secuencias de aminoácidos:</p>
+<a class="reference internal image-reference" href="../_images/Many_mis_mut_prot.png"><img alt="../_images/Many_mis_mut_prot.png" src="../_images/Many_mis_mut_prot.png" /></a>
+<p>La mayoría de mutaciones missense observadas son mutaciones missense cuyo análisis no merece mayor atención que decir que se produce una sustitución de un aminoácido de un grupo por otro aminoácido con las mismas propiedades bioquímicas. Sin embargo, también observamos que <strong>en algunas mutaciones missense, el cambio de codón implican el cambio de un aminoácido por otro que presenta unas características bioquímicas diferentes</strong>. Estas últimas sustituciones han sido señaladas en la imagen superior con un círculo azul y se deben a las siguientes sustituciones de nucleótidos, señaladas a continuación por un cuadrado color rojo.</p>
+<a class="reference internal image-reference" href="../_images/Trans_mis_mut.png"><img alt="alternate text" class="align-right" src="../_images/Trans_mis_mut.png" /></a>
+<ul class="simple">
+<li>La mutación en la que se produce el cambio de aspartato (D) por asparragina (N) se debe a una <strong>transición G-A</strong> en el primer aminoácido del codón.</li>
+<li>La mutación en la que se produce el cambio de treonina (T) por prolina (P) se debe a una <strong>transversión A-C</strong>. Esta mutación missense puede resultar importante para la estructura del hexón, al ser la prolina un aminoácido con un anillo pirrólico que puede presentar una restricción a la hora del plegamiento.</li>
+</ul>
+<a class="reference internal image-reference" href="../_images/Transv_mis_mut.png"><img alt="alternate text" src="../_images/Transv_mis_mut.png" /></a>
+</div>
+<hr class="docutils" />
+<div class="section" id="clasificacion-de-los-mejores-modelos-de-sustitucion">
+<h2>Clasificación de los mejores modelos de sustitución.<a class="headerlink" href="#clasificacion-de-los-mejores-modelos-de-sustitucion" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/FBDM_parametros.png"><img alt="alternate text" class="align-right" src="../_images/FBDM_parametros.png" style="width: 400px; height: 300px;" /></a>
+<p>Utilizando la función que se incluye en el programa Mega 7, en el apartado Models y que está nombrada como <strong>Find Best DNA/Protein Models</strong>; procedemos a identificar cuál de los múltiples modelos de sustitución que existen es el idóneo para realizar el análisis filogenético de nuestras secuencias alineadas.</p>
+<p>Los parámetros que se han utilizado en el análisis son los que vienen dados por defecto en la función, y podemos verlos en la imagen de la derecha.</p>
+<p>Los resultados del análisis del alineamiento múltiple para encontrar el mejor modelo de sustitución vienen expresados en la siguiente tabla. Es por ello que <strong>hemos seleccionado para el cálculo del árbol filogenético el modelo de Kimura 2 parámetros con una gamma de 0,27</strong>, el primer modelo en la tabla generada y que, además, se encuentra disponible para ser utilizado por Mega.</p>
+<p><em>Tabla 3 - Clasificación de los mejores modelos para la construcción del árbol filogenético.</em></p>
+<a class="reference internal image-reference" href="../_images/FBDM_table.png"><img alt="alternate text" src="../_images/FBDM_table.png" /></a>
+<a class="reference internal image-reference" href="../_images/FBDM_table2_end.png"><img alt="alternate text" src="../_images/FBDM_table2_end.png" /></a>
+<a class="reference internal image-reference" href="../_images/FBDM_table2.png"><img alt="alternate text" src="../_images/FBDM_table2.png" /></a>
+<div class="section" id="descripcion-y-comentario-del-modelo-de-sustitucion-seleccionado">
+<h3>Descripción y comentario del modelo de sustitución seleccionado<a class="headerlink" href="#descripcion-y-comentario-del-modelo-de-sustitucion-seleccionado" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/Kimura2P.gif"><img alt="Matriz utilizada en K2P" class="align-right" src="../_images/Kimura2P.gif" /></a>
+<p>El modelo de Kimura 2 parámetros utiliza una probabilidad alfa de que ocurran transiciones, y una probabilidad beta de que ocurran transversiones y, en principio, considera que los rangos de sustitución no varían a lo largo de la secuencia. Es por ello que al modelo de Kimura 2-parámetros se le añade una gamma de 0.27 que aporta como información adicional el lugar donde es más probable que ocurra una mutación. En este caso, la gamma es 0,27, y se asume que es más probable que la mutación ocurra al inicio de la secuencia.</p>
+<hr class="docutils" />
+<a class="reference internal image-reference" href="../_images/TN93.png"><img alt="../_images/TN93.png" class="align-right" src="../_images/TN93.png" /></a>
+<p>Además del modelo Kimura 2-parámetros, es necesario e interesante realizar el análisis filogenético con otro modelo de sustitución que se encuentre en las primeras posiciones de los recomendados por Mega para así otorgar de robustez el árbol filogenético que se genere a continuación. Puesto que Mega no nos deja utilizar HKY+G, el análisis suplementario se ha realizado con el siguiente modelo, que es el modelo Tamura-Nei, 93 (TN93) con gamma = 0,29. El modelo TN93 tiene cuatro parámetros que son frecuencias y que tiene en cuenta las diferencias entre transiciones y transversiones y, además, las diferencias entre los dos tipos de transiciones (purina-purina &amp; pirimidina-pirimidina).</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../arboles/arboles.html" title="Construcción y análisis de árboles filogenéticos"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../secuencias/secuencias.html" title="Secuencias biológicas"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">tarea1 1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Daniel Parras Molina.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

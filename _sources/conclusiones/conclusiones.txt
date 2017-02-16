@@ -1,0 +1,62 @@
+#####################
+Conclusiones
+#####################
+
+Tal y como hemos analizado en detalle en el apartado anterior, **los árboles filogenéticos permiten establecer de forma clara la distribución de serotipos que son más prevalentes en China en pacientes pediátricos con SARI**. Hay que tener en cuenta que, probablemente, el tamaño muestral puede suponer una limitación. Sin embargo, el simple análisis del árbol filogenético permite, de una manera visual y clara, tener consciencia de qué serotipos de entre todos los presentes en HAdV-C son frente a los que hay que centrar las investigaciones que van orientadas a la búsqueda de vacunas o posibles tratamientos. 
+
+En la tabla 5, podemos ver agrupados la prevalencia de cada uno de los diferentes serotipos en la población en cuestión. 
+
+*Tabla 5. Prevalencia de los distintos serotipos de HAdV-C en pacientes pediátricos con SARI*
+
+=====================   =================================
+   Serotipos HAdV-C                 Prevalencia
+=====================   =================================
+HAdV-C1                                 27,9 % 
+HAdV-C2                                 30,23 %
+HAdV-C5				23,25%
+HAdV-C57				2,3%
+HAdV-C6				9,3%
+HAdV-CBJ133 (new) 		13,95%
+=====================   =================================
+
+Con estos datos, podemos planificar estudios epidemiológicos y podríamos recomendar la investigación hacia los serotipos HAdV-C1, -C2 y -C5; que representan en conjunto un 77,78% de las muestras recogidas en la población de estudio. 
+
+
+Igualmente, podría ser interesante realizar investigación básica sobre los serotipos HAdV-C1, -C2 y -C5 que vaya orientada a la **búsqueda de las proteínas o los posibles mecanismos de patogenicidad o factores de virulencia que les aporte a estos serotipos la capacidad de producir SARI en niños**. 
+
+Por otra parte, resulta imprescindible comentar en este apartado el hecho de que **se ha identificado un nuevo serotipo de HAdV-C en China en la población de estudio**, denominado en este trabajo como CBJ113. Bajo mi punto de vista, es fundamental tener bien caracterizado al mismo para evitar posibles epidemias que serían, seguramente, graves puesto que produce SARI (enfermedad que puede tener graves complicaciones y cuyas consecuencias pueden ser fatales en la población china y mundial). 
+
+Con el mero objetivo de caracterizar lo máximo posible a este nuevo serotipo, sería muy recomendable realizar un **análisis filogenético de cada una de las proteínas que codifica el genoma completo del mismo con cada una de las diferentes proteínas codificadas por el genoma completo del resto de serotipos**. Esta idea ha sido desarollada por los autores del artículo elegido y la conclusión final a la que llegan es que el nuevo serotipo CBJ133 se ha desarrollado a partir de eventos de recombinación intratípica entre las cepas de HAdV-C, así como otros subtipos de HAdV como HAdV-1 y HAdV-2. 
+
+La recombinación intratípica supone un proceso de formación de nuevas cepas de virus que se produce en el momento en el que coexisten dos virus coinfectando el mismo tipo de célula. Este es el caso de los HAdV, de manera que es posible que se produzca la recombinación entre los genomas de ambos tipos de virus, desencadenando la formación de un nuevo tipo que sea mixto y cuyo genoma sea el resultado de los dos anteriores. 
+
+A la conclusión de que **la nueva cepa HAdV-C denominada CBJ133 presenta un genoma mosaico** distinta de la cepa HAdV-C57; cepa que se originó también por eventos de recombinación intratípica, se ha llegado a través de análisis filogenéticos, de SNPs y BootScan, realizados por los autores del artículo original. 
+
+
+Así, a modo de conclusión final, podemos determinar que los análisis filogenéticos suponen una herramienta muy útil a la hora de caracterizar nuevos serotipos y subespecies, así como para determinar la historia evolutiva de los mismos. Sin embargo, es necesario realizar una serie de análisis complementarios, como BootScan y análisis de los SNPs entre otros; que completen la información final de la historia evolutiva. Por otro lado, el análisis filogenético permite planificar estrategias epidemiológicas y dar pie a estudios que permitan prevenir la diseminación de los virus a través de nuevas medidas profilácticas y terapéuticas. 
+
+----
+
+Material suplementario
+============================
+En esta sección se presentan los enlaces para descargar el material suplementario que ha sido citado en otras partes del trabajo. 
+
+
+:download:`Alineamiento múltiple de las secuencias C-terminal de los hexones de pacientes y de hAdV-C de referencia<Sup_Mat_Clustal_Multiple_alignment_hAdVs&partialgenome.mas>`
+
+:download:`Tabla completa de distancias según Kimura 2 parámetros con gamma = 0,27<Sup_Mat_Distance_K2P_list.txt>`
+
+
+:download:`Análisis filogenético de los hexones con el modelo de sustitución Tamura-Nei 93 con gamma = 0,29<Sup_Mat_TN93_tree.rar>`
+
+
+:download:`Material utilizado en el análisis filogenético del genoma completo de 13 HAdV incluyendo la nueva cepa CBJ133<Sup_Mat_Complete_genome_tree.rar>`
+
+
+
+
+
+
+
+
+
